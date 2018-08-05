@@ -19,20 +19,22 @@ class Users extends Component {
     const { users, user_count } = this.state;
 
     return (
-      <div class="container">
+      <div className="container">
         <table>
+        <tbody>
           <tr>
-            <th class="left blue">Display name</th>
-            <th class="left blue">OS</th>
-            <th class="left blue">OS version</th>
+            <th className="left blue">Display name</th>
+            <th className="left blue">OS</th>
+            <th className="left blue">OS version</th>
           </tr>
           {users.map(user =>
             <tr>
-              <td class="left"><a href="">{user.displayname}</a></td>
-              <td class="left">{user.email}</td>
-              <td class="left">{user.lastLogon}</td>
+              <td className="left"><a href="">{user.displayname}</a></td>
+              <td className="left">{user.email}</td>
+              <td className="left">{user.lastLogon}</td>
             </tr>
           )}
+        </tbody>
         </table>
       </div>
     );

@@ -19,20 +19,22 @@ class Computers extends Component {
     const { computers, computer_count } = this.state;
 
     return (
-      <div class="container">
+      <div className="container">
         <table>
+        <tbody>
           <tr>
-            <th class="left blue">Display name</th>
-            <th class="left blue">OS</th>
-            <th class="left blue">OS version</th>
+            <th className="left blue">Display name</th>
+            <th className="left blue">OS</th>
+            <th className="left blue">OS version</th>
           </tr>
           {computers.map(computer =>
             <tr>
-              <td class="left">{computer.displayname}</td>
-              <td class="left">{computer.os}</td>
-              <td class="left">{computer.osVersion}</td>
+              <td className="left">{computer.displayname}</td>
+              <td className="left">{computer.os}</td>
+              <td className="left">{computer.osVersion}</td>
             </tr>
           )}
+        </tbody>
         </table>
       </div>
     );
