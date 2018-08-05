@@ -4,19 +4,18 @@ class Users extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: [],
-      user_count: 0
+      users: []
     };
   }
 
   componentDidMount() {
     fetch('https://sb-backendapi.azurewebsites.net/api/Users')
       .then(response => response.json())
-      .then(data => this.setState({ users: data, user_count: data.length }));
+      .then(data => this.setState({ users: data }));
   }
 
   render() {
-    const { users, user_count } = this.state;
+    const { users } = this.state;
 
     return (
       <div className="container">

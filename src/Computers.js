@@ -4,19 +4,18 @@ class Computers extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      computers: [],
-      computer_count: 0
+      computers: []
     };
   }
 
   componentDidMount() {
     fetch('https://sb-backendapi.azurewebsites.net/api/Computers')
       .then(response => response.json())
-      .then(data => this.setState({ computers: data, computer_count: data.length }));
+      .then(data => this.setState({ computers: data }));
   }
 
   render() {
-    const { computers, computer_count } = this.state;
+    const { computers } = this.state;
 
     return (
       <div className="container">
